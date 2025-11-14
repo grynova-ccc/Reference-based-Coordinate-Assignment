@@ -19,10 +19,33 @@ In the introduction of the article, we review several existing techniques for di
 
 The motivation behind developing RCA is twofold. First, it provides an intuitive framework that can be directly compared to GPS and multilateration-based tracking systems—except now applied in high-dimensional spaces. Second, RCA offers a quantitative way to express the “similar structure → similar property” principle. Across multiple datasets, machine-learning tasks, and model architectures, we show that using RCA-projected spaces as input not only reduces computational cost and runtime, but also consistently improves predictive accuracy.
 
-## ⚠️ Limitations of the Method
+## 🔧 Installation
 
+To generate the RCA space from the input space, install the package using:
 
-## 🔧 Getting Started With the Code
+```bash
+pip install RCA-space
+```
+The core function for generating the RCA space, `RCA_vectorised`, depends only on [NumPy](https://numpy.org/). However, to generate the required inputs for this function, you may use `RCA_reference_projection`, which introduces additional dependencies on both [NumPy](https://numpy.org/) and [scikit-learn](https://scikit-learn.org/stable/).
+
+Producing the representation for a single molecule is not very useful when training a machine-learning model. However, when using the one_electron_matrices package, only one CIF file is needed to compute its corresponding representation. To generate representations for multiple CIF files in parallel, you can use the following code:
+```python
+from joblib import Parallel, delayed
+from pathlib import Path
+from your_module import oem_rep  # import your function
+
+cif_folder = Path("PATH_TO_CIFS")
+output_folder = Path("OUTPUT_PATH")
+output_folder.mkdir(exist_ok=True, parents=True)
+
+cif_files = sorted(cif_folder.glob("*.cif"))
+
+N = N  # adjust CPU usage
+
+Parallel(n_jobs=N)(
+    delayed(oem_rep)(str(cif_path), output_path=str(output_folder))
+    for cif_path in cif_files)
+```
 
 ## Contact
 If you have questions, feel free to reach out: stivllenga@gmail.com
