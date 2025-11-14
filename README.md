@@ -13,3 +13,10 @@ RCA treats points in the original high-dimensional space as belonging to two gro
 * Y: a set of reference points that aren't part of the original dataset
 
 The core idea of RCA is to project the X space into a new coordinate system while preserving only the pairwise distances between Y–Y and X–Y points. This approach is inspired by the concept of multilateration. As an analogy, you can think of the Y points as cell towers or satellites, and the X points as unknown locations. RCA aims to determine the positions of the X points using only their distances to the Y reference points.
+
+## ❓ Why This Project?
+The AGNES dataset contains very complex chemistry, with molecules that vary widely in their frameworks, functional groups, and the number and placement of nitrogen atoms. Because of this diversity, spotting meaningful patterns across the compounds isn’t easy.
+
+By “asking” the trained machine-learning model what patterns it has learned—using tools like SHAP—we can understand not only why it makes certain predictions, but also how the different input features relate to the outputs.
+
+## 🔧 Getting Started With the Code
