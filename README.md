@@ -23,3 +23,10 @@ The motivation behind developing RCA is twofold. First, it provides an intuitive
 
 
 ## 🔧 Getting Started With the Code
+
+## Contact
+If you have questions, feel free to reach out: stivllenga@gmail.com
+
+## Citation
+If you use this project in your research, please cite:
+URL URL URL
