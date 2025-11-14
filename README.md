@@ -31,12 +31,17 @@ The core function for generating the RCA space, `RCA_vectorised`, depends only o
 ## 🚀 How to Use
 
 To generate the RCA space from a given input, two functions are required. The `RCA_reference_projection` function produces the necessary inputs for constructing the RCA space. This function has the following syntax:
+
 `arr1,arr2=RCA_reference_projection(original_array, ref_array=None, k=None)`
+
 This function takes as input the coordinates of the high-dimensional input space (`original_array`) and, optionally, the coordinates of a set of reference points (`ref_array`). If no predefined reference constellation is provided, the user may instead specify a value of `k`, in which case the function will compute the cluster centroids of the input space and use them as the reference constellation.
+
 This function outputs two arrays: the reduced coordinates of the reference points (`arr1`), and the pairwise distances between the high-dimensional reference points and the unknown points (`arr2`).
 
 Once this function has been executed, the next step is to run `RCA_vectorised`. This function has the following syntax:
+
 `RCA_space=RCA_vectorized(ref_point, distances)`
+
 Here, `ref_point` refers to the low-dimensional coordinates of the reference constellation (corresponding to `arr1` in the function above), and `distances` refers to the distance matrix between the reference points and the unknown points (corresponding to `arr2` in the function above).
 
 A short tutorial on how to use the code is included in this repository.
