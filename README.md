@@ -12,11 +12,14 @@ RCA treats points in the original high-dimensional space as belonging to two gro
 
 * Y: a set of reference points that aren't part of the original dataset
 
-The core idea of RCA is to project the X space into a new coordinate system while preserving only the pairwise distances between Y–Y and X–Y points. This approach is inspired by the concept of multilateration. As an analogy, you can think of the Y points as cell towers or satellites, and the X points as unknown locations. RCA aims to determine the positions of the X points using only their distances to the Y reference points.
+The core idea of RCA is to project the X space into a new coordinate system while preserving only the pairwise distances between Y–Y and X–Y points. This approach is inspired by the concept of multilateration. As an analogy, you can think of the Y points (called reference points) as cell towers or satellites, and the X points as unknown locations. RCA aims to determine the positions of the X points using only their distances to the Y reference points.
 
 ## ❓ Why This Project?
-The AGNES dataset contains very complex chemistry, with molecules that vary widely in their frameworks, functional groups, and the number and placement of nitrogen atoms. Because of this diversity, spotting meaningful patterns across the compounds isn’t easy.
+In the introduction of the article, we review several existing techniques for dimensionality reduction. However, RCA is best understood not as a traditional dimensionality-reduction method, but as a projection technique: it projects the original input space into a new space whose dimensionality equals the number of reference points.
 
-By “asking” the trained machine-learning model what patterns it has learned—using tools like SHAP—we can understand not only why it makes certain predictions, but also how the different input features relate to the outputs.
+The motivation behind developing RCA is twofold. First, it provides an intuitive framework that can be directly compared to GPS and multilateration-based tracking systems—except now applied in high-dimensional spaces. Second, RCA offers a quantitative way to express the “similar structure → similar property” principle. Across multiple datasets, machine-learning tasks, and model architectures, we show that using RCA-projected spaces as input not only reduces computational cost and runtime, but also consistently improves predictive accuracy.
+
+## ⚠️ Limitations of the Method
+
 
 ## 🔧 Getting Started With the Code
