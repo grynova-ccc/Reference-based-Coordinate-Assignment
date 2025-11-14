@@ -30,7 +30,14 @@ The core function for generating the RCA space, `RCA_vectorised`, depends only o
 
 ## 🚀 How to Use
 
-Producing the representation for a single molecule is not very useful when training a machine-learning model. However, when using the one_electron_matrices package, only one CIF file is needed to compute its corresponding representation. To generate representations for multiple CIF files in parallel, you can use the following code:
+To generate the RCA space from a given input, two functions are required. The `RCA_reference_projection` function produces the necessary inputs for constructing the RCA space. This function has the following syntax:
+`arr1,arr2=RCA_reference_projection(original_array, ref_array=None, k=None)`
+This function takes as input the coordinates of the high-dimensional input space (`original_array`) and, optionally, the coordinates of a set of reference points (`ref_array`). If no predefined reference constellation is provided, the user may instead specify a value of `k`, in which case the function will compute the cluster centroids of the input space and use them as the reference constellation.
+This function outputs two arrays:
+
+* arr1 – the reduced coordinates of the reference points, and
+
+* arr2 – the pairwise distances between the high-dimensional reference points and the unknown points.
 ```python
 from joblib import Parallel, delayed
 from pathlib import Path
