@@ -1,6 +1,6 @@
 # Navigating the chemical space with a molecular GPS
 <p align="center">
-  <img src="images/image_1.png" width="650" />
+  <img src="Images/image_1.png" width="650" />
 </p>
 
 ## Welcome! 👋
