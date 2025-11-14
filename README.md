@@ -49,7 +49,7 @@ In the Tutorial folder of the repository, you can find an example showing how to
 The N-HPC-1X dataset was created by applying the GANNA algorithm to introduce between one and six nitrogen atoms into frameworks composed of four to eight conjugated rings. It contains 10,582 nitrogen-doped compounds, all in their neutral closed-shell state. For each structure, the geometry, single-point energy, and HOMO/LUMO energies were computed at the PBE0-D3/def2-TZVP level of theory. The dataset includes the following types of frameworks:
 
 <p align="center">
-  <img src="Images/image_2.png" width="600" />
+  <img src="Images/image_2.png" width="400" />
 </p>
 
 ## Contact
