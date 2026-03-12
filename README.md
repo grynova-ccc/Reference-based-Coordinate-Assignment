@@ -1,4 +1,4 @@
-# Navigating the chemical space with a molecular GPS
+# Navigating high-dimensional spaces in chemistry and beyond with a reference-based coordinate assignment
 <p align="center">
   <img src="Images/image_1.png" width="650" />
 </p>
