@@ -62,4 +62,5 @@ If you have questions, feel free to reach out: stivllenga@gmail.com
 
 ## Citation
 If you use this project in your research, please cite:
-URL URL URL
+Navigating high-dimensional spaces in chemistry and beyond with a reference-based coordinate assignment. ChemRxiv. 16 March 2026.
+DOI: https://doi.org/10.26434/chemrxiv.15000944/v1
